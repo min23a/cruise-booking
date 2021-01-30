@@ -43,6 +43,7 @@ nav ul li a:hover, a.active{
     grid-template-columns: 2fr 3fr;
     gap: 70px;
     align-items: center;
+    opacity : 1;
 }
 .booking-content{
     color: #fff;
@@ -129,4 +130,31 @@ nav ul li a:hover, a.active{
     padding: 7px;
     border: none;
     margin: 11px 1px 3px 1px;
+}
+.popup-section{
+    margin: 30px 0px;
+    width: 100vw;
+    position: absolute;
+    top:25%;
+    opacity: 0;
+    z-index: -1;
+}
+.popup{
+    width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+}
+.popup img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 20px;
+}
+.popup p{
+    margin: auto;
+    width: 300px;
+    font-weight: 900;
 }

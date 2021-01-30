@@ -43,20 +43,20 @@
             <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                <input id="from" class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <input id="to" class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                        <input class="inp-style" type="date" name="">
+                        <input id="deprature" class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input id="return" class="inp-style" type="date" name="">
                 </div>
             </div>
             <div class="input-group f-class">
@@ -65,8 +65,10 @@
                     <input id="f-class-quantity" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button id="f-class-plus_btn" onclick="handleClicks('f-class', true)"><i class="fas fa-plus"></i></button>
-                    <button id="f-class-minus_btn" onclick="handleClicks('f-class', false)"><i class="fas fa-minus"></i></button>
+                    <button id="f-class-plus_btn" onclick="handleClicks('f-class', true)"><i
+                            class="fas fa-plus"></i></button>
+                    <button id="f-class-minus_btn" onclick="handleClicks('f-class', false)"><i
+                            class="fas fa-minus"></i></button>
                 </div>
             </div>
 
@@ -110,9 +112,25 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="popup()" class="btn-style">Book Now</button>
         </div>
     </main>
+    <section class="popup-section">
+        <div class="popup">
+            <img src="images/congrats.jpg" alt="CONGRATS">
+            <p>
+                From : <span id="from-print"></span><br>
+                To : <span id="to-print"></span><br>
+                Date : <span id="date"></span><br>
+                Return date : <span id="return-date"></span><br>
+                First class ticket : <span id="f-class-ticket"></span><br>
+                Economy ticket : <span id="e-class-ticket"></span><br>
+                Subtotal : <span id="subtotal-print"></span><br>
+                Tax : <span id="tax-print"></span><br>
+                Total : <span id="total-print"></span><br>
+            </p>
+        </div>
+    </section>
     <script src="main.js"></script>
     <!--Thank You-->
 </body>

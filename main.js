@@ -30,8 +30,8 @@ function priceCalculator(tripType) {
         let total = 100 * quantity;
         document.getElementById(tripType + "-price").innerText = "$" + total;
     }
-    let numOfTicket = document.getElementById("f-class-quantity").value;
-    let quantityOfFirstClass = parseInt(numOfTicket);
+    let numOfTicketF = document.getElementById("f-class-quantity").value;
+    let quantityOfFirstClass = parseInt(numOfTicketF);
     let numOfTicketE = document.getElementById("e-class-quantity").value;
     let quantityOfEconomy = parseInt(numOfTicketE);
     //subtotal calculator
@@ -43,4 +43,19 @@ function priceCalculator(tripType) {
     //total calculator
     let total = subTotal + tax;
     document.getElementById("total").innerText = "$" + total;
+}
+
+//bonus part 
+function popup() {
+    document.querySelector(".main-content").style.opacity = "0";
+    document.querySelector(".popup-section").style.opacity = "1";
+    document.getElementById("from-print").innerText = document.getElementById("from").value;
+    document.getElementById("to-print").innerText = document.getElementById("to").value;
+    document.getElementById("date").innerText = document.getElementById("deprature").value;
+    document.getElementById("return-date").innerText = document.getElementById("return").value;
+    document.getElementById("f-class-ticket").innerText = document.getElementById("f-class-quantity").value;
+    document.getElementById("e-class-ticket").innerText = document.getElementById("e-class-quantity").value;
+    document.getElementById("subtotal-print").innerText = document.getElementById("subtotal").innerText;
+    document.getElementById("tax-print").innerText = document.getElementById("tax").innerText;
+    document.getElementById("total-print").innerText = document.getElementById("total").innerText;
 }
